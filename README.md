@@ -173,72 +173,23 @@ This project is designed to deliver a meaningful and reusable toolkit for EMI pr
 ---
 
 This work contributes to the domain of **hardware-aware EV converter design**, offering a scalable solution for fast EMI prediction, early design optimization, and sustainable development cycles.
-## 🗓️ Project Timeline
+## ✅ Project Aims and Checklist
 
-A structured 13-week plan guides the end-to-end development of the EMI prediction tool, from literature review to model validation and report writing.
+| Aim                                                                 | Checklist Item                                                                 |
+|----------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| Predict EMI characteristics (overshoot, ringing, dv/dt, di/dt)      | [ ] Define EMI-related outputs as target variables                            |
+| Build dataset using simulations and datasheets                      | [ ] Run LTSpice Double Pulse Tests (DPT)                                      |
+|                                                                      | [ ] Extract key device parameters (Qg, Vth, RDS(on), Coss)                    |
+| Perform feature engineering                                          | [ ] Derive features from PCB layout and gate drive parameters                 |
+| Train and compare ML models                                          | [ ] Train Support Vector Machines (SVM)                                       |
+|                                                                      | [ ] Train Artificial Neural Networks (ANN)                                    |
+|                                                                      | [ ] (Optional) Try CNNs / transfer learning on waveform/image data            |
+| Evaluate model performance                                           | [ ] Compute RMSE, MAE, and R²                                                  |
+|                                                                      | [ ] Generate predicted vs actual plots                                        |
+|                                                                      | [ ] Analyze feature importance (SHAP/permutation)                             |
+| Validate with real PCB test data                                     | [ ] Collect oscilloscope EMI measurements                                     |
+|                                                                      | [ ] Compare ML predictions vs hardware measurements                           |
+| Deliver reusable outputs                                             | [ ] Prepare clean dataset for future use                                      |
+|                                                                      | [ ] Document and share ML tool + evaluation results                           |
 
----
-
-### 📚 Weeks 1–2: Literature Review
-- Understand EMI in WBG converters (SiC/GaN)
-- Study switching behavior, ringing, parasitics, gate drive
-- Identify key semiconductor parameters (Qg, RDS(on), Coss, Vgs, etc.)
-- Research ML techniques applicable to EMI spectrum prediction
-
-📤 **Output:** Conceptual grounding and key term definitions
-
----
-
-### 🗂️ Weeks 3–4: Data Collection & Feature Engineering
-- Run LTSpice simulations for Si, SiC, and GaN MOSFETs
-- Extract datasheet parameters
-- Merge simulation and datasheet data
-- Perform initial feature engineering
-
-📤 **Output:** Combined dataset in Excel with raw and derived features
-
----
-
-### 🔧 Week 5: Final Dataset & Baseline Code
-- Finalise cleaned, scaled dataset
-- Review initial project setup
-- Build baseline SVM model
-
-📤 **Output:** Ready-to-use ML dataset and project review
-
----
-
-### 🤖 Weeks 6–7: Baseline ML Models
-- Train and evaluate Linear Regression and SVM
-- Metrics: MAE, RMSE, R²
-- Compare baseline models
-
-📤 **Output:** Short evaluation report with comparison plots and scores
-
----
-
-### 🧠 Weeks 8–9: ANN Development
-- Build ANN model using MLPRegressor or PyTorch
-- Tune hyperparameters (layers, activation, dropout)
-- Compare ANN with baseline models
-
-📤 **Output:** Performance plots and training metrics
-
----
-
-### 🔬 Weeks 10–11: Extended Models & Real Data Validation
-- Test additional models: Random Forest, Gradient Boosting, k-NN
-- Explore: PCA, SHAP, 1D CNNs, and transfer learning
-- Validate against real oscilloscope readings from PCB tests
-
-📤 **Output:** Full comparison table and benchmarked EMI predictions
-
----
-
-### 📝 Weeks 12–13: Final Report & Submission
-- Compile all results, graphs, and visualisations
-- Finalise modeling and clean up noisy data
-- Supervisor review, proofreading, formatting
-
-📤 **Output:** Complete MSc thesis and code package for submission
 
