@@ -147,3 +147,98 @@ If ANN performance is suboptimal:
 ### 🧪 Ground Truth Validation
 
 Final models will be validated against **real oscilloscope measurements** from PCB hardware to assess generalisation and real-world reliability.
+
+## 🧾 Expected Contributions
+
+This project is designed to deliver a meaningful and reusable toolkit for EMI prediction in EV power converter design.
+
+---
+
+### 🛠️ Key Deliverables
+
+- ✅ A **Python-based machine learning tool** for EMI prediction using simulation and datasheet parameters.
+- 📂 A **clean, well-structured dataset** combining:
+  - Time-domain waveform features
+  - Component-level specifications (Si, SiC, GaN)
+- 📊 A **comparative study** of multiple ML models, including:
+  - Linear Regression
+  - Support Vector Machines (SVM)
+  - Artificial Neural Networks (ANN)
+  - (Optionally) CNNs and Transfer Learning methods
+- 📈 A **validation report** with:
+  - Predicted vs actual EMI comparisons
+  - Visualizations and plots
+  - Accuracy metrics (RMSE, MAE, R²)
+
+---
+
+This work contributes to the domain of **hardware-aware EV converter design**, offering a scalable solution for fast EMI prediction, early design optimization, and sustainable development cycles.
+## 🗓️ Project Timeline
+
+A structured 13-week plan guides the end-to-end development of the EMI prediction tool, from literature review to model validation and report writing.
+
+---
+
+### 📚 Weeks 1–2: Literature Review
+- Understand EMI in WBG converters (SiC/GaN)
+- Study switching behavior, ringing, parasitics, gate drive
+- Identify key semiconductor parameters (Qg, RDS(on), Coss, Vgs, etc.)
+- Research ML techniques applicable to EMI spectrum prediction
+
+📤 **Output:** Conceptual grounding and key term definitions
+
+---
+
+### 🗂️ Weeks 3–4: Data Collection & Feature Engineering
+- Run LTSpice simulations for Si, SiC, and GaN MOSFETs
+- Extract datasheet parameters
+- Merge simulation and datasheet data
+- Perform initial feature engineering
+
+📤 **Output:** Combined dataset in Excel with raw and derived features
+
+---
+
+### 🔧 Week 5: Final Dataset & Baseline Code
+- Finalise cleaned, scaled dataset
+- Review initial project setup
+- Build baseline SVM model
+
+📤 **Output:** Ready-to-use ML dataset and project review
+
+---
+
+### 🤖 Weeks 6–7: Baseline ML Models
+- Train and evaluate Linear Regression and SVM
+- Metrics: MAE, RMSE, R²
+- Compare baseline models
+
+📤 **Output:** Short evaluation report with comparison plots and scores
+
+---
+
+### 🧠 Weeks 8–9: ANN Development
+- Build ANN model using MLPRegressor or PyTorch
+- Tune hyperparameters (layers, activation, dropout)
+- Compare ANN with baseline models
+
+📤 **Output:** Performance plots and training metrics
+
+---
+
+### 🔬 Weeks 10–11: Extended Models & Real Data Validation
+- Test additional models: Random Forest, Gradient Boosting, k-NN
+- Explore: PCA, SHAP, 1D CNNs, and transfer learning
+- Validate against real oscilloscope readings from PCB tests
+
+📤 **Output:** Full comparison table and benchmarked EMI predictions
+
+---
+
+### 📝 Weeks 12–13: Final Report & Submission
+- Compile all results, graphs, and visualisations
+- Finalise modeling and clean up noisy data
+- Supervisor review, proofreading, formatting
+
+📤 **Output:** Complete MSc thesis and code package for submission
+
