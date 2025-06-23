@@ -33,7 +33,25 @@ These WBG devices offer fast switching and reduced power losses but generate **h
 Conventional EMI prediction methods rely heavily on **LTSpice simulations** and **Double Pulse Testing (DPT)**, which are time-intensive and not feasible for iterative or scalable hardware development.
 
 ---
+## ✅ Project Aims and Checklist
 
+| Aim                                                                 | Checklist Item                                                                 |
+|----------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| Predict EMI characteristics (overshoot, ringing, dv/dt, di/dt)      | [ ] Define EMI-related outputs as target variables                            |
+| Build dataset using simulations and datasheets                      | [ ] Run LTSpice Double Pulse Tests (DPT)                                      |
+|                                                                      | [ ] Extract key device parameters (Qg, Vth, RDS(on), Coss)                    |
+| Perform feature engineering                                          | [ ] Derive features from PCB layout and gate drive parameters                 |
+| Train and compare ML models                                          | [ ] Train Support Vector Machines (SVM)                                       |
+|                                                                      | [ ] Train Artificial Neural Networks (ANN)                                    |
+|                                                                      | [ ] (Optional) Try CNNs / transfer learning on waveform/image data            |
+| Evaluate model performance                                           | [ ] Compute RMSE, MAE, and R²                                                  |
+|                                                                      | [ ] Generate predicted vs actual plots                                        |
+|                                                                      | [ ] Analyze feature importance (SHAP/permutation)                             |
+| Validate with real PCB test data                                     | [ ] Collect oscilloscope EMI measurements                                     |
+|                                                                      | [ ] Compare ML predictions vs hardware measurements                           |
+| Deliver reusable outputs                                             | [ ] Prepare clean dataset for future use                                      |
+|                                                                      | [ ] Document and share ML tool + evaluation results                           |
+--- 
 ## 🔍 Motivation
 
 The need for a **faster, scalable, and data-driven EMI prediction method** is critical to accelerating the design of next-generation EV converters. Manually modeling or simulating each design permutation is inefficient, particularly when EMI is influenced by:
@@ -173,23 +191,6 @@ This project is designed to deliver a meaningful and reusable toolkit for EMI pr
 ---
 
 This work contributes to the domain of **hardware-aware EV converter design**, offering a scalable solution for fast EMI prediction, early design optimization, and sustainable development cycles.
-## ✅ Project Aims and Checklist
 
-| Aim                                                                 | Checklist Item                                                                 |
-|----------------------------------------------------------------------|--------------------------------------------------------------------------------|
-| Predict EMI characteristics (overshoot, ringing, dv/dt, di/dt)      | [ ] Define EMI-related outputs as target variables                            |
-| Build dataset using simulations and datasheets                      | [ ] Run LTSpice Double Pulse Tests (DPT)                                      |
-|                                                                      | [ ] Extract key device parameters (Qg, Vth, RDS(on), Coss)                    |
-| Perform feature engineering                                          | [ ] Derive features from PCB layout and gate drive parameters                 |
-| Train and compare ML models                                          | [ ] Train Support Vector Machines (SVM)                                       |
-|                                                                      | [ ] Train Artificial Neural Networks (ANN)                                    |
-|                                                                      | [ ] (Optional) Try CNNs / transfer learning on waveform/image data            |
-| Evaluate model performance                                           | [ ] Compute RMSE, MAE, and R²                                                  |
-|                                                                      | [ ] Generate predicted vs actual plots                                        |
-|                                                                      | [ ] Analyze feature importance (SHAP/permutation)                             |
-| Validate with real PCB test data                                     | [ ] Collect oscilloscope EMI measurements                                     |
-|                                                                      | [ ] Compare ML predictions vs hardware measurements                           |
-| Deliver reusable outputs                                             | [ ] Prepare clean dataset for future use                                      |
-|                                                                      | [ ] Document and share ML tool + evaluation results                           |
 
 
