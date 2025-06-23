@@ -46,3 +46,104 @@ The need for a **faster, scalable, and data-driven EMI prediction method** is cr
 This project proposes to use **machine learning** as a surrogate modeling strategy. By learning from simulation data and real datasheet parameters, ML models can predict EMI-related metrics such as **overshoot voltage**, **ringing frequency**, **dv/dt**, and **di/dt**—significantly speeding up early-stage design decisions.
 
 The overall motivation is to improve **design speed**, **accuracy**, and **sustainability** of EV power electronics through predictive intelligence.
+
+## 🎯 Aims and Objectives
+
+### 🎯 Project Aim
+
+To develop a **machine learning-based surrogate model** capable of predicting **Electromagnetic Interference (EMI)** characteristics—such as overshoot voltage, ringing frequency, dv/dt, and di/dt—in **Electric Vehicle (EV) onboard chargers**, using data from simulations and semiconductor datasheets.
+
+---
+
+### ✅ Key Objectives
+
+- 📊 **Simulate switching behavior** using LTSpice-based Double Pulse Test (DPT) circuits with parametric variations.
+- 📄 **Extract component-level parameters** (e.g., Qg, Vth, RDS(on), Coss) from datasheets of Si, SiC, and GaN MOSFETs.
+- 🧮 **Engineer features** representing gate drive, PCB layout, and parasitic elements from the testbench configuration.
+- 🤖 **Train and evaluate ML models** including:
+  - Support Vector Machines (SVM)
+  - Artificial Neural Networks (ANN)
+  - (Optional) CNNs and transfer learning for waveform/image-based learning
+- 🧪 **Validate model performance** against real oscilloscope measurements from hardware tests.
+
+The ultimate goal is to build a robust, scalable, and interpretable ML pipeline that can accelerate EMI prediction and optimize the design cycle for EV power converters.
+## 🧠 Approach and Dataset Design
+
+This project builds a dataset that captures the relationship between **semiconductor-level inputs** and **EMI-related outputs** using both simulations and datasheet-driven parameters.
+
+---
+
+### 🧾 Data Sources
+
+- **LTSpice Simulations**  
+  Double Pulse Test (DPT) circuits are used to simulate switching behaviors with varied parameters:
+  - Gate resistance (Rg)
+  - Bus voltage (Vbus)
+  - Parasitic inductance (Ls)
+  - Load types
+
+- **Semiconductor Datasheets**  
+  Parameters are extracted for devices based on **Silicon (Si)**, **Silicon Carbide (SiC)**, and **Gallium Nitride (GaN)**, including:
+  - Gate charge (Qg)
+  - Threshold voltage (Vth)
+  - On-resistance (RDS(on))
+  - Output/input capacitance (Coss)
+
+---
+
+### 🎯 Prediction Targets (Labels)
+
+The machine learning models will predict the following EMI-relevant outputs:
+- ⚡ Peak overshoot voltage
+- 🔁 Ringing frequency
+- ⏫ Rise/fall time
+- 📈 Switching slopes (dv/dt and di/dt)
+
+This approach combines **simulation-based waveform metrics** with **datasheet parameters** to build a rich, feature-engineered dataset suitable for ML-based EMI prediction.
+
+## 🧪 Model Strategy and Evaluation
+
+This section outlines the modeling workflow, starting with interpretable baselines and progressing to more complex neural models. Model performance is quantitatively evaluated and compared.
+
+---
+
+### 🔧 Initial Modeling Steps
+
+- **Linear Regression** and **Support Vector Regression (SVR)** as simple and interpretable baselines.
+- **Feedforward Artificial Neural Networks (ANN)** using:
+  - `MLPRegressor` (scikit-learn) or
+  - Custom architectures in PyTorch
+
+Key techniques include:
+- Layer tuning (number of neurons and depth)
+- Dropout for regularization
+- Early stopping to prevent overfitting
+
+---
+
+### 📊 Evaluation Metrics
+
+Models will be evaluated using:
+- **Root Mean Square Error (RMSE)**
+- **Mean Absolute Error (MAE)**
+- **R² Score**
+- **Predicted vs Actual Scatter Plots**
+- **Feature importance** using SHAP or permutation analysis
+
+---
+
+### 🔍 Advanced Model Exploration
+
+If ANN performance is suboptimal:
+- Try other regressors like:
+  - Random Forest Regressor
+  - Gradient Boosting
+  - k-Nearest Neighbours (k-NN)
+- Explore **1D Convolutional Neural Networks (CNNs)** on waveform segments
+- Apply **transfer learning** with pretrained models (e.g., ResNet) if EMI waveforms are stored as images
+
+---
+
+### 🧪 Ground Truth Validation
+
+Final models will be validated against **real oscilloscope measurements** from PCB hardware to assess generalisation and real-world reliability.
