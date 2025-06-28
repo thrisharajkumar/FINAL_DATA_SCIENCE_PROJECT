@@ -52,10 +52,3 @@ Conventional EMI prediction methods rely heavily on **LTSpice simulations** and 
 |                                                                      | [ ] Document and share ML tool + evaluation results                           |
 --- 
 
-
----
-
-This work contributes to the domain of **hardware-aware EV converter design**, offering a scalable solution for fast EMI prediction, early design optimization, and sustainable development cycles.
-
-
-
