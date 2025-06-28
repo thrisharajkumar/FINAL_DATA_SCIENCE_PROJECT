@@ -1,6 +1,7 @@
 Results:
 --- Table 1 ---
 ['Part Number', 'Package', 'Marking']
+
 ['C3M0280090D', 'TO-247-3', 'C3M0280090']
 
 --- Table 2 ---
@@ -15,4 +16,6 @@ Results:
 ['T , T\nJ stg', 'Operating Junction and Storage Temperature', '-55 to\n+150', '˚C', '', '']
 ['T\nL', 'Solder Temperature', '260', '˚C', '1.6mm (0.063”) from case for 10s', '']
 ['M\nd', 'Mounting Torque', '1\n8.8', 'Nm\nlbf-in', 'M3 or 6-32 screw', '']
+
+
 Maximum Ratings table saved to: maximum_ratings.xlsx
