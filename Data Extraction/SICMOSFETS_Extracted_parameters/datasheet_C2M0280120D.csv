@@ -1,0 +1,2 @@
+﻿DeviceID,VBR_DSS,VGS_th_min,VGS_th_max,RDS_on_typ,RDS_on_max,Qg_total,Qgs,Qgd,Rg_int,Ciss,Coss,Crss,td_on,tr,td_off,tf,Eon,Eoff,Qrr,trr,Irrm,Rth_JC_typ,Rth_JC_max,Tj_max,Power_dissipation
+C2M0280120D,1200,2,4,320,370,19,6,7,10,267,31,4,6,19,10,16,0.111,0.01,48,17,5,1.53,1.8,150,69.4
