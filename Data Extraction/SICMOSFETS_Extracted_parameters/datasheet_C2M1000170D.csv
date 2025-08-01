@@ -1,2 +1,0 @@
-﻿DeviceID,VBR_DSS,VGS_th_min,VGS_th_max,RDS_on_typ,RDS_on_max,Qg_total,Qgs,Qgd,Rg_int,Ciss,Coss,Crss,td_on,tr,td_off,tf,Eon,Eoff,Qrr,trr,Irrm,Rth_JC_typ,Rth_JC_max,Tj_max,Power_dissipation
-C2M1000170D,1700,2,4,800,1400,22,4,12,24.8,215,19,2.2,5,19,14,63,0.089,0.014,31,30,3,1.7,1.8,150,69
