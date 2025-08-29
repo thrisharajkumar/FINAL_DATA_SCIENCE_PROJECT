@@ -1,1 +1,0 @@
-tree /f > project_structure.txt

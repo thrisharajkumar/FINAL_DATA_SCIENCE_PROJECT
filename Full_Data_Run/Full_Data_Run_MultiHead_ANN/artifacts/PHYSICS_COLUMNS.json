@@ -1,0 +1,14 @@
+[
+  "f_resonance",
+  "overshoot_est",
+  "undershoot_est",
+  "dVdt_est",
+  "dIdt_est",
+  "L_eq",
+  "C_eq",
+  "sqrt_LC",
+  "inv_sqrt_LC",
+  "Q_est",
+  "v_over_L",
+  "v_over_C"
+]

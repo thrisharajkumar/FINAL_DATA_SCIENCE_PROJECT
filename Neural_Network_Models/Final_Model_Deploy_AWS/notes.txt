@@ -1,6 +1,0 @@
-├── Final_Deploy_AWS/
-│   ├── Final_Training_AWS.ipynb
-│   ├── inference_api_test.ipynb
-│   ├── export_savedmodel/
-│   ├── lambda_integration_code.py
-│   └── notes.txt

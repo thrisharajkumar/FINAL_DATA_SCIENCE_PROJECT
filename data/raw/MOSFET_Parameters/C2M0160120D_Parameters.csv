@@ -1,0 +1,2 @@
+Part_Number,VDS_max,ID_max_25C,RDS_on_typ,RDS_on_max,VGS_th_min,VGS_th_typ,VGS_th_max,Qg_total,Qrr_typ,Irrm_typ,Eon_typ,Eoff_typ,Ciss,Coss,Crss,Rth_JC_typ,Rth_JC_max,Tj_max
+C2M0160120D,1200,25,0.16,0.208,2.0,2.9,4.0,41,108,5.5,0.375,0.051,740,71,6,0.8,0.85,150
